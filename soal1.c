@@ -21,12 +21,24 @@ void prints(int* array, int size){
 }
 
 void display(int array[], int size){
-    int sum = 0;
+    int sum = 0; int max = array[0]; int changed = 0;
     printf("RECOVERED ");
     for(int i = 0; i < size; i++){
         printf("%d", array[i]);
         if (i != size-1) printf(" ");
-        if(array[i] >= 0) sum += array[i];
+
+        if(array[i] > max){
+            max = array[i];
+        }
+
+        if(array[i] >= 0) {
+            sum += array[i];
+            changed = 1;
+        }
+
+        if (changed == 0){
+            sum = max;
+        }
     }
     printf("\nMAX_SUM %d", sum);
 }
