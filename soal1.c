@@ -111,25 +111,31 @@ void inputs(int* array, int* arrSize){
     // prints(array, *arrSize);
  }
 
+ int input(int* size){
+    scanf("%d", size);
+ }
+
+ void inputArr(int arr[], int size){
+    for(int i = 0; i < size; i++){
+        scanf("%d", &arr[i]);
+    }
+ }
 
   
  int main() {
     // int* array; 
     int arrSize; 
+    input(&arrSize);
 
-    scanf("%d ", &arrSize);
     // array = (int*) malloc(*arrSize * sizeof(int));
     int array[arrSize];
-
-    for(int i = 0; i < arrSize; i++){
-        scanf("%d", &array[i]);
-    }
+    inputArr(array, arrSize);
+    
 
     // prints(array, arrSize);
 
     // inputs(array, &arrSize);
 
-    
 
     // printf("sizeL %d\n", arrSize);
     recovery(array, arrSize);
