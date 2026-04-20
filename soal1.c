@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void prints(int* array, int size){
+void prints(int* array, int size){ // fungsi debugging
     for(int i = 0; i < size; i++){
         printf("%d", array[i]);
     }
