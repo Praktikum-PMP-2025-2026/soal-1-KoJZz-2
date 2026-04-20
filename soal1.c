@@ -67,7 +67,7 @@ int cari(int* array, int index, int size){
 
     if (temp1 != -1 && temp2 != -1){
         temp = floor((temp1+temp2)/2);
-        if (temp < 0) temp -= 1;
+        if (temp < 0 && (temp1+temp2)%2 != 0) temp -= 1;
     } else if (temp1 != -1) {
         temp = temp1;
     } else if (temp2 != -1) {
